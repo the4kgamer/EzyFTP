@@ -303,6 +303,8 @@ public class ConnectionController {
 
 
 
+
+
             ftp.put_Ssl(true);
 
 
@@ -326,10 +328,11 @@ public class ConnectionController {
 
 
             UsernameLabel.setText(Username);
-            UsernameLabel.setStyle("green");
+            UsernameLabel.setTextFill(Color.web("008000"));
             //I know I named the host button 'passwordlabel', I am too lazy to change it back..
             PasswordLabel.setText(IP);
-            PasswordLabel.setTextFill(Color.web(""));
+
+            PasswordLabel.setTextFill(Color.web("008000"));
 
             Console.setText("Connection to " + IP + " Was successful :)");
             Console.setStyle("-fx-text-inner-color: green");
@@ -569,20 +572,34 @@ public class ConnectionController {
 
     public void Disconnect(ActionEvent event) {
 
+        if(UsernameLabel.getText().equals("(not connected) ")){
 
-        Console.setStyle("-fx-text-inner-color: orange");
-        Console.setText(Console.getText() + " Disconnecting..... ");
-        UsernameLabel.setStyle("-fx-text-inner-color: blue");
 
-        PasswordLabel.setStyle("-fx-text-inner-color: blue");
+            Console.setStyle("-fx-text-inner-color: orange");
+            Console.setText(Console.getText() + " No connected to a server has been established ");
+            ConsoleUpdate();
 
-        UsernameLabel.setText("Disconnected");
+        }
+        else
+        {
 
-        PasswordLabel.setText("Disconnected");
+            Console.setStyle("-fx-text-inner-color: orange");
+            Console.setText(Console.getText() + " Disconnecting..... ");
+            UsernameLabel.setTextFill(Color.web("0x0000FF"));
 
-        disconnect--;
+            PasswordLabel.setTextFill(Color.web("0x0000FF"));
 
-        ConsoleUpdate();
+            UsernameLabel.setText("Disconnected");
+
+            PasswordLabel.setText("Disconnected");
+
+            disconnect--;
+
+            ConsoleUpdate();
+
+        }
+
+
 
 
 
@@ -719,9 +736,12 @@ public class ConnectionController {
 
                 Console.setText(Console.getText() + "Attempt at reconnecting to " + IP + "Failed.... " + Attempts + " attempts remaining!");
 
-                UsernameLabel.setStyle("-fx-text-inner-color: orange");
 
-                PasswordLabel.setStyle("-fx-text-inner-color: orange");
+                UsernameLabel.setTextFill(Color.web("FF8C00"));
+                PasswordLabel.setTextFill(Color.web("FF8C00"));
+
+
+
 
                 UsernameLabel.setText("Contended");
 
@@ -739,13 +759,16 @@ public class ConnectionController {
                 Console.setText(Console.getText() + "\n ");
                 Console.setText(Console.getText() + "Attempting reconnect to \n" + IP + " ");
                 AttemptedReconnect++;
-                UsernameLabel.setStyle("-fx-text-inner-color: orange");
+                UsernameLabel.setTextFill(Color.web("FF8C00"));
+                PasswordLabel.setTextFill(Color.web("FF8C00"));
 
-                PasswordLabel.setStyle("-fx-text-inner-color: orange");
+
+
 
                 UsernameLabel.setText("Contended");
 
                 PasswordLabel.setText("Contended");
+
 
             }
             else
