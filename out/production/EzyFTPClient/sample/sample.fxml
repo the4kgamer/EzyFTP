@@ -34,16 +34,17 @@
                 <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <CheckBox id="CheckBoxSSLonly" fx:id="CheckBoxSSLonly" layoutX="36.0" layoutY="423.0" mnemonicParsing="false" onAction="#SSLSelected" text="Only SSL connetions" />
+                  <CheckBox id="CheckBoxSSLonly" fx:id="CheckBoxSSLonly" layoutX="36.0" layoutY="445.0" mnemonicParsing="false" onAction="#SSLSelected" text="Only SSL connetions" />
                   <TextField id="TxtHost" fx:id="TxtHost" layoutX="37.0" layoutY="73.0" promptText="Host/IP:" />
                   <TextField id="TxtUsername" fx:id="TxtUsername" layoutX="37.0" layoutY="136.0" promptText="Username:" />
                   <TextField id="Port" fx:id="Port" layoutX="37.0" layoutY="263.0" promptText="Port:" />
-                  <ProgressBar layoutX="13.0" layoutY="455.0" prefWidth="200.0" progress="0.0" />
-                  <ProgressIndicator layoutX="162.0" layoutY="359.0" progress="0.0" />
+                  <ProgressBar layoutX="13.0" layoutY="485.0" prefWidth="200.0" progress="0.0" />
+                  <ProgressIndicator layoutX="161.0" layoutY="404.0" progress="0.0" />
                   <Label id="ErrorLabel" fx:id="Label" layoutX="92.0" layoutY="486.0" prefHeight="18.0" prefWidth="0.0" textFill="RED" />
-                  <Button id="ConnectBtn" fx:id="ConnectBtn" layoutX="78.0" layoutY="359.0" mnemonicParsing="false" onAction="#TestConnect" text="Connect" />
-                  <Button id="ConsoleTest" fx:id="ConsoleTest" layoutX="50.0" layoutY="319.0" mnemonicParsing="false" onAction="#TestConsole" text="Console Test" />
+                  <Button id="ConnectBtn" fx:id="ConnectBtn" layoutX="78.0" layoutY="404.0" mnemonicParsing="false" onAction="#TestConnect" text="Connect" />
+                  <Button id="ConsoleTest" fx:id="ConsoleTest" layoutX="50.0" layoutY="366.0" mnemonicParsing="false" onAction="#TestConsole" text="Console Test" />
                   <PasswordField id="TxtPassword" fx:id="TxtPassword" layoutX="36.0" layoutY="199.0" promptText="Password" />
+                  <CheckBox id="SaveInfoCheckBtn" fx:id="SaveInfoCheckBtn" layoutX="52.0" layoutY="310.0" mnemonicParsing="false" text="CheckBox" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

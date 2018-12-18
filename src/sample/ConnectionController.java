@@ -4,6 +4,9 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.net.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
@@ -48,6 +51,7 @@ import javafx.scene.control.Alert.AlertType;
 import API.easyFTP;
 
 import javafx.util.Duration;
+import org.apache.commons.io.FileUtils;
 import org.controlsfx.control.Notifications;
 import org.omg.CORBA.INTERNAL;
 import org.slf4j.Logger;
@@ -183,6 +187,9 @@ public class ConnectionController {
 
     private Label PasswordLabel;
 
+    @FXML
+
+    private CheckBox SaveInfoCheckBtn;
 
 
     // define menu items
@@ -237,6 +244,9 @@ public class ConnectionController {
     }
 
 
+    public int UniqueConnectionCount = 0;
+
+
     public void TestConsole() {
 
 
@@ -251,7 +261,7 @@ public class ConnectionController {
 
     public int disconnect = 1;
     public int i = 0;
-    //connect to FTP (now that I am going to be using chilkat
+    //connect to FTP (now that I am going to be using chilkat)
     public void TestConnect(ActionEvent event) throws Exception{
         String Username = TxtUsername.getText();
         String Password = TxtPassword.getText();
@@ -297,6 +307,9 @@ public class ConnectionController {
 
         boolean isSelected = CheckBoxSSLonly.isSelected();
 
+        boolean SaveShizz = SaveInfoCheckBtn.isSelected();
+
+
         if(isSelected == true){
 
 
@@ -321,8 +334,41 @@ public class ConnectionController {
 
 
 
+
         success = ftp.Connect();
         if (success == true) {
+
+            if (SaveShizz == true) {
+                UniqueConnectionCount++;
+
+                File file = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
+                if(FileUtils.readFileToString(file).contains(IP + Username + Password)) {
+
+
+                } else
+                {
+                    System.out.print("New connection details detected, OOFT");
+                    Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
+                    Charset charset = StandardCharsets.UTF_8;
+                    String ConnectionNumeralValue = Integer.toString(UniqueConnectionCount);
+
+
+
+                    String content = new String(Files.readAllBytes(path), charset);
+                    content = content.replaceAll(ConnectionNumeralValue, IP + Username + Password);
+                    Files.write(path, content.getBytes(charset));
+
+                }
+
+            }
+            //add to fast connection (connection without having to re enter in all your details)
+
+
+
+
+
+
+
 
 
 

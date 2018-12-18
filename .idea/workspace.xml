@@ -8,12 +8,25 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fixed up label colours">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/AbstractFTPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/AbstractFTPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/DirectoryViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/DirectoryViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/DirectoryViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/DirectoryViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/FTPFileInfoVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/FTPFileInfoVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/FTPLogCommandListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/FTPLogCommandListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/FTPTransferMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/FTPTransferMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/ServerToClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/ServerToClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/ServerToServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/ServerToServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/API/easyFTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/API/easyFTP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$1RepeteTick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$1RepeteTick.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/ConnectionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/EzyFTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EzyFTPClient/sample/EzyFTP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/ConnectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ConnectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/ConnectionHistory" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ConnectionHistory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +93,10 @@
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="5" />
+          <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="32" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -124,9 +137,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="24" />
-          <entry key="JAVA" value="25120" />
+          <entry key="JAVA" value="26270" />
           <entry key="Manifest" value="14" />
-          <entry key="PLAIN_TEXT" value="239" />
+          <entry key="PLAIN_TEXT" value="328" />
           <entry key="XML" value="83" />
         </counts>
       </usages-collector>
@@ -137,11 +150,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/ConnectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="330" column="47" selection-start-line="330" selection-start-column="38" selection-end-line="330" selection-end-column="47" />
+            <state relative-caret-position="663">
+              <caret line="367" lean-forward="true" selection-start-line="367" selection-end-line="367" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,9 +162,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/ConnectionHistory">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -166,10 +183,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/EzyFTP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="230">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6938#6939#0" expanded="true" />
+                <element signature="e#6966#6967#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,10 +258,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FTPTransfermode</find>
-      <find>Delete</find>
-      <find>upload</find>
-      <find>sts</find>
       <find>transfer</find>
       <find>file</find>
       <find>easyftp</find>
@@ -269,6 +284,10 @@
       <find>disconnect()</find>
       <find>Disconnect()</find>
       <find>color.web</find>
+      <find>Sys</find>
+      <find>FileUtils</find>
+      <find>unique</find>
+      <find>contains</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -305,16 +324,17 @@
         <option value="$PROJECT_DIR$/src/API/AbstractAnimation.java" />
         <option value="$PROJECT_DIR$/src/API/DirectoryListView.java" />
         <option value="$PROJECT_DIR$/src/API/DirectoryViewer.java" />
-        <option value="$PROJECT_DIR$/src/sample/EzyFTP.java" />
         <option value="$PROJECT_DIR$/src/sample/Sys" />
+        <option value="$PROJECT_DIR$/src/sample/ConnectionHistory" />
+        <option value="$PROJECT_DIR$/src/sample/EzyFTP.java" />
         <option value="$PROJECT_DIR$/src/sample/ConnectionController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="489" />
-    <option name="y" value="-10" />
+    <option name="x" value="990" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -327,6 +347,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -422,8 +444,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +455,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545086146464" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545098692661" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -572,7 +592,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.11673774" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.117803834" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -581,7 +601,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1583514" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -732,6 +752,13 @@
     <entry file="jar://$USER_HOME$/Downloads/TrayNotification.jar!/tray/resources/success.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/FTPLogCommandListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/API/AbstractFTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -766,20 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EzyFTP.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/ConnectionHistory">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/FTPLogCommandListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -790,18 +807,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EzyFTP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6938#6939#0" expanded="true" />
+            <element signature="e#6966#6967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ConnectionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="330" column="47" selection-start-line="330" selection-start-column="38" selection-end-line="330" selection-end-column="47" />
+        <state relative-caret-position="663">
+          <caret line="367" lean-forward="true" selection-start-line="367" selection-end-line="367" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ConnectionHistory">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
