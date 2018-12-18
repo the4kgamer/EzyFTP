@@ -1,7 +1,7 @@
 package sample;
 
 import java.awt.event.ActionListener;
-import java.io.File;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.net.*;
 import java.nio.charset.Charset;
@@ -60,13 +60,8 @@ import org.slf4j.LoggerFactory;
 
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
-import java.io.BufferedOutputStream;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 import static java.lang.System.out;
 import static java.lang.System.*;
@@ -79,7 +74,6 @@ import API.FTPTransferMode;
 import API.ServerToClient;
 import API.ServerToServer;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Handler;
 import java.util.regex.Matcher;
@@ -109,8 +103,7 @@ import javafx.stage.Stage;
 import org.fxmisc.livedirs.*;
 import com.chilkatsoft.CkZip;
 import java.util.concurrent.TimeUnit;
-
-
+import java.util.stream.Stream;
 
 
 import API.*;
@@ -191,6 +184,10 @@ public class ConnectionController {
 
     private CheckBox SaveInfoCheckBtn;
 
+    @FXML
+
+    private MenuButton SavedMenu;
+
 
     // define menu items
     MenuItem menuItem1 = new MenuItem("Transfer from server to local directory");
@@ -206,6 +203,7 @@ public class ConnectionController {
 
 
     public int AttemptedReconnect = 1;
+
 
 
 
@@ -244,7 +242,7 @@ public class ConnectionController {
     }
 
 
-    public int UniqueConnectionCount = 0;
+    public int UniqueConnectionCount;
 
 
     public void TestConsole() {
@@ -338,25 +336,139 @@ public class ConnectionController {
         success = ftp.Connect();
         if (success == true) {
 
+
             if (SaveShizz == true) {
-                UniqueConnectionCount++;
+
 
                 File file = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
-                if(FileUtils.readFileToString(file).contains(IP + Username + Password)) {
+                if(FileUtils.readFileToString(file).contains(IP + " " + Username + " " + Password)) {
+                    //ill place a 'you have just entered saved credentials, next time for your ease, select your desired server's address from the "Saved Credentials" bar
+
+
 
 
                 } else
                 {
+                    File Sysfile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
+
+                    Stream<String> lines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
+                    String SavedConnectionNumber = lines.skip(7).findFirst().get();
+
+                    int SavedConnectINTEGAR = Integer.parseInt(SavedConnectionNumber);
+
+
+
+                    SavedConnectINTEGAR++;
+
+
+
+                    String NumberToPutInThere = String.valueOf(SavedConnectINTEGAR);
+
+                    Scanner scanner=new Scanner("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
+                    List<String> list=new ArrayList<>();
+                    while(scanner.hasNextLine()){
+                        list.add(scanner.nextLine());
+
+                    }
+                    if(list.contains("131024718237409182740927834023")){
+                        //I am going to work on this later
+
+                        // found.
+                    }else{
+                        // not found
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    String OOFT = "ooft";
+
+                    //String SavedConnectionNumber = Files.readAllLines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys")).get(8);
+
+
+
+
+
+
+
+
                     System.out.print("New connection details detected, OOFT");
-                    Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
+                    Path SysPath = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
+
                     Charset charset = StandardCharsets.UTF_8;
                     String ConnectionNumeralValue = Integer.toString(UniqueConnectionCount);
 
 
 
-                    String content = new String(Files.readAllBytes(path), charset);
-                    content = content.replaceAll(ConnectionNumeralValue, IP + Username + Password);
-                    Files.write(path, content.getBytes(charset));
+                    String SafeConnectionNumeral = (SavedConnectionNumber + "1024718237409182740927834023");
+
+
+
+
+                    String SysContent = new String(Files.readAllBytes(SysPath), charset);
+
+                    SysContent = SysContent.replaceAll(SavedConnectionNumber, NumberToPutInThere);
+                    Files.write(SysPath, SysContent.getBytes(charset));
+
+
+
+                    Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
+
+
+                    String HistoryContent = new String(Files.readAllBytes(path), charset);
+
+                    HistoryContent = HistoryContent.replaceAll(SafeConnectionNumeral, IP + " " + Username + " " + Password);
+
+
+                    System.out.print("New connection details detected, OOFT");
+
+
+
+
+                    //1024718237409182740927834023 is something I hope no one ever has as either their username, password or host address for an FTP server
+
+                    System.out.print(SafeConnectionNumeral);
+
+
+
+
+
+                    MenuItem m1 = new MenuItem(IP + " " + Username);
+
+
+
+
+
+
+
+                    SavedMenu.getItems().add(m1);
+
+
+
+
+
+
+
+
+                    //String content = new String(Files.readAllBytes(path), charset);
+
+
+
+
+                    HistoryContent = HistoryContent.replaceAll(SafeConnectionNumeral, IP + " " + Username + " " + Password);
+                    Files.write(path, HistoryContent.getBytes(charset));
+
 
                 }
 
@@ -372,6 +484,7 @@ public class ConnectionController {
 
 
 
+            i = 0;
 
             UsernameLabel.setText(Username);
             UsernameLabel.setTextFill(Color.web("008000"));

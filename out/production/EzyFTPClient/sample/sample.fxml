@@ -44,7 +44,13 @@
                   <Button id="ConnectBtn" fx:id="ConnectBtn" layoutX="78.0" layoutY="404.0" mnemonicParsing="false" onAction="#TestConnect" text="Connect" />
                   <Button id="ConsoleTest" fx:id="ConsoleTest" layoutX="50.0" layoutY="366.0" mnemonicParsing="false" onAction="#TestConsole" text="Console Test" />
                   <PasswordField id="TxtPassword" fx:id="TxtPassword" layoutX="36.0" layoutY="199.0" promptText="Password" />
-                  <CheckBox id="SaveInfoCheckBtn" fx:id="SaveInfoCheckBtn" layoutX="52.0" layoutY="310.0" mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox id="SaveInfoCheckBtn" fx:id="SaveInfoCheckBtn" layoutX="31.0" layoutY="316.0" mnemonicParsing="false" text="Save Credentials" />
+                  <MenuButton id="SavedMenu" fx:id="SavedMenu" layoutX="39.0" layoutY="14.0" mnemonicParsing="false" text="Saved Credentials">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

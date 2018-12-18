@@ -73,19 +73,17 @@ public class EzyFTP extends Application {
         //now read the file line by line...
 
 
-        if(FileUtils.readFileToString(file).contains("HAS DISAGREED TRUE")) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("WTF are you doing?");
-            Image image = new Image("https://i.kym-cdn.com/entries/icons/original/000/026/913/excuse.jpg");
+        //if(FileUtils.readFileToString(file).contains("HAS DISAGREED TRUE")) {
+        //    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        //    alert.setTitle("WTF are you doing?");
+        //    Image image = new Image("https://i.kym-cdn.com/entries/icons/original/000/026/913/excuse.jpg");
 
-            ImageView imageView = new ImageView(image);
-            alert.setGraphic(imageView);
-            alert.setHeaderText("You recently disagreed to the terms and conditions, what are you trying to do????");
-            alert.setContentText("if you are thinking of using the program, just read the terms and AGREE!, it isn't anything serious...");
+        //    ImageView imageView = new ImageView(image);
+        //    alert.setGraphic(imageView);
+        //    alert.setHeaderText("You recently disagreed to the terms and conditions, what are you trying to do????");
+        //    alert.setContentText("if you are thinking of using the program, just read the terms and AGREE!, it isn't anything serious...");
 
-            alert.showAndWait();
-
-
+        //    alert.showAndWait();
 
 
 
@@ -94,65 +92,67 @@ public class EzyFTP extends Application {
 
 
 
-        }
-        else {
-
-        }
-        if(FileUtils.readFileToString(file).contains("Agreed FALSE")) {
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("LEGAL");
-            Image image = new Image("https://yt3.ggpht.com/-tLz_OkEzUe8/AAAAAAAAAAI/AAAAAAAAAAA/36Nh5H1VOGQ/s108-c-k-no-mo-rj-c0xffffff/photo.jpg");
-            ImageView imageView = new ImageView(image);
-            alert.setGraphic(imageView);
-
-            alert.setHeaderText("By pressing ok you are agreeing to adhere to the following terms ");
-            alert.setContentText("Permission is hereby granted, free of charge, to any person obtaining a copy\n" +
-                    "of this software and associated documentation files (the \"Software\"), to deal\n" +
-                    "in the Software without restriction, including without limitation the rights\n" +
-                    "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" +
-                    "copies of the Software, and to permit persons to whom the Software is\n" +
-                    "furnished to do so, subject to the following conditions:\n" +
-                    "\n" +
-                    "The above copyright notice and this permission notice shall be included in all\n" +
-                    "copies or substantial portions of the Software.\n" +
-                    "\n" +
-                    "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" +
-                    "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" +
-                    "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n" +
-                    "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n" +
-                    "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n" +
-                    "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n" +
-                    "SOFTWARE.\n" +
-                    "\n" +
-                    "Copyright (c) 2018 The4kGamer\n");
 
 
+        //}
+        //else {
 
-            Optional<ButtonType> result = alert.showAndWait();
-            ButtonType button = result.orElse(ButtonType.CANCEL);
+        //}
+        //if(FileUtils.readFileToString(file).contains("Agreed FALSE")) {
 
-            if (button == ButtonType.OK) {
+        //    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        //    alert.setTitle("LEGAL");
+        //    Image image = new Image("https://yt3.ggpht.com/-tLz_OkEzUe8/AAAAAAAAAAI/AAAAAAAAAAA/36Nh5H1VOGQ/s108-c-k-no-mo-rj-c0xffffff/photo.jpg");
+        //    ImageView imageView = new ImageView(image);
+        //    alert.setGraphic(imageView);
 
-                Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
-                Charset charset = StandardCharsets.UTF_8;
+        //    alert.setHeaderText("By pressing ok you are agreeing to adhere to the following terms ");
+        //    alert.setContentText("Permission is hereby granted, free of charge, to any person obtaining a copy\n" +
+        //            "of this software and associated documentation files (the \"Software\"), to deal\n" +
+        //            "in the Software without restriction, including without limitation the rights\n" +
+        //            "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" +
+        //            "copies of the Software, and to permit persons to whom the Software is\n" +
+        //            "furnished to do so, subject to the following conditions:\n" +
+        //            "\n" +
+        //            "The above copyright notice and this permission notice shall be included in all\n" +
+        //            "copies or substantial portions of the Software.\n" +
+        //            "\n" +
+        //            "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" +
+        //            "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" +
+        //            "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n" +
+        //            "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n" +
+        //            "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n" +
+        //            "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n" +
+        //            "SOFTWARE.\n" +
+        //            "\n" +
+        //            "Copyright (c) 2018 The4kGamer\n");
 
-                String content = new String(Files.readAllBytes(path), charset);
-                content = content.replaceAll("Agreed FALSE", "Agreed TRUE");
-                content = content.replaceAll("HAS DISAGREED TRUE", "HAS DISAGREED FALSE");
-                Files.write(path, content.getBytes(charset));
-            } else {
 
-                Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
-                Charset charset = StandardCharsets.UTF_8;
 
-                String content = new String(Files.readAllBytes(path), charset);
-                content = content.replaceAll("HAS DISAGREED FALSE", "HAS DISAGREED TRUE");
-                Files.write(path, content.getBytes(charset));
-                Platform.exit();
-                System.exit(0);
+         //   Optional<ButtonType> result = alert.showAndWait();
+         //   ButtonType button = result.orElse(ButtonType.CANCEL);
 
-            }
+          //  if (button == ButtonType.OK) {
+
+         //       Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
+          //      Charset charset = StandardCharsets.UTF_8;
+
+          //      String content = new String(Files.readAllBytes(path), charset);
+          //      content = content.replaceAll("Agreed FALSE", "Agreed TRUE");
+           //     content = content.replaceAll("HAS DISAGREED TRUE", "HAS DISAGREED FALSE");
+           //     Files.write(path, content.getBytes(charset));
+           // } else {
+
+            //    Path path = Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
+            //    Charset charset = StandardCharsets.UTF_8;
+
+            //    String content = new String(Files.readAllBytes(path), charset);
+            //    content = content.replaceAll("HAS DISAGREED FALSE", "HAS DISAGREED TRUE");
+           //     Files.write(path, content.getBytes(charset));
+           //     Platform.exit();
+            //    System.exit(0);
+
+            //}
             //alert.showAndWait(); ugh fixed the issue
 
             //I am aware it compiles at runtime, but I just have a habit of building it prior?!??!
@@ -165,7 +165,7 @@ public class EzyFTP extends Application {
 
 
 
-        }
+        //}
 
 
 
