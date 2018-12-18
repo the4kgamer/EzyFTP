@@ -364,19 +364,10 @@ public class ConnectionController {
 
                     String NumberToPutInThere = String.valueOf(SavedConnectINTEGAR);
 
-                    Scanner scanner=new Scanner("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\ConnectionHistory");
-                    List<String> list=new ArrayList<>();
-                    while(scanner.hasNextLine()){
-                        list.add(scanner.nextLine());
+                    String HowManySavedConnections = String.valueOf(SavedConnectINTEGAR--);
 
-                    }
-                    if(list.contains("131024718237409182740927834023")){
-                        //I am going to work on this later
 
-                        // found.
-                    }else{
-                        // not found
-                    }
+
 
 
 
@@ -439,6 +430,10 @@ public class ConnectionController {
                     //1024718237409182740927834023 is something I hope no one ever has as either their username, password or host address for an FTP server
 
                     System.out.print(SafeConnectionNumeral);
+
+                    //find out how many saved connections there are
+
+
 
 
 
