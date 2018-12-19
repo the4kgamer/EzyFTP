@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
@@ -26,6 +28,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.stream.Stream;
 //import org.apache.*;
 import org.apache.commons.io.FileUtils;
 
@@ -35,6 +38,8 @@ import org.apache.commons.io.FileUtils;
  */
 public class EzyFTP extends Application {
 
+    @FXML
+    public MenuButton SavedMenu;
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -43,6 +48,10 @@ public class EzyFTP extends Application {
         primaryStage.show();
         Image icon = new Image(getClass().getResourceAsStream("/images/logo.png"));
         primaryStage.getIcons().add(icon);
+
+
+
+
 
         File Sysfile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
         if (Sysfile.isFile()) {
@@ -181,7 +190,11 @@ public class EzyFTP extends Application {
 
 
 
+
+
     public static void main(String[] args) {
         launch(args);
+
+
     }
 }

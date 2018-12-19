@@ -47,8 +47,7 @@
                   <CheckBox id="SaveInfoCheckBtn" fx:id="SaveInfoCheckBtn" layoutX="31.0" layoutY="316.0" mnemonicParsing="false" text="Save Credentials" />
                   <MenuButton id="SavedMenu" fx:id="SavedMenu" layoutX="39.0" layoutY="14.0" mnemonicParsing="false" text="Saved Credentials">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
+
                     </items>
                   </MenuButton>
           </children>

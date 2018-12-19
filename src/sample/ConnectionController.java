@@ -196,7 +196,19 @@ public class ConnectionController {
 
 
 
+
+    public void FetchSavedConnections() throws IOException {
+
+
+
+
+    }
+
+
+
+
     //demonstreigtion of current client functionality...
+
 
 
 
@@ -211,6 +223,7 @@ public class ConnectionController {
 
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
+
 
 
 
@@ -265,6 +278,7 @@ public class ConnectionController {
         String Password = TxtPassword.getText();
         String IP = TxtHost.getText();
         disconnect = 1;
+        i = 0;
 
 
         //CheckFields();
@@ -372,7 +386,7 @@ public class ConnectionController {
 
                         File HistFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
 
-                        Stream<String> HistLines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
+                        Stream<String> HistoryLines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
                         String GetDetails1 = lines.skip(0).findFirst().get();
                         String GetDetails2 = lines.skip(1).findFirst().get();
                         String GetDetails3 = lines.skip(2).findFirst().get();
@@ -456,6 +470,7 @@ public class ConnectionController {
                             SavedMenu.getItems().add(m9);
 
                         }
+
 
 
 
@@ -767,6 +782,8 @@ public class ConnectionController {
 
 
     }
+
+
 
 
 
