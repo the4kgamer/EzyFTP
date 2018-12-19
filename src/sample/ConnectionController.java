@@ -363,16 +363,39 @@ public class ConnectionController {
 
                     FlexableInt--;
                     FlexableInt--;
+
                     String RealInt = String.valueOf(FlexableInt);
 
+
+
                     if (FlexableInt>=0) {
-                        
+
                         File HistFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
 
                         Stream<String> HistLines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
-                        String GetDetails = lines.skip(0).findFirst().get();
+                        String GetDetails1 = lines.skip(0).findFirst().get();
+                        String GetDetails2 = lines.skip(1).findFirst().get();
+                        String GetDetails3 = lines.skip(2).findFirst().get();
+                        String GetDetails4 = lines.skip(3).findFirst().get();
+                        String GetDetails5 = lines.skip(4).findFirst().get();
+                        String GetDetails6 = lines.skip(5).findFirst().get();
+                        String GetDetails7 = lines.skip(6).findFirst().get();
+                        String GetDetails8 = lines.skip(7).findFirst().get();
+                        String GetDetails9 = lines.skip(8).findFirst().get();
 
-                        MenuItem m1 = new MenuItem(GetDetails);
+
+
+
+
+                        MenuItem m1 = new MenuItem(GetDetails1);
+                        MenuItem m2 = new MenuItem(GetDetails2);
+                        MenuItem m3 = new MenuItem(GetDetails3);
+                        MenuItem m4 = new MenuItem(GetDetails4);
+                        MenuItem m5 = new MenuItem(GetDetails5);
+                        MenuItem m6 = new MenuItem(GetDetails6);
+                        MenuItem m7 = new MenuItem(GetDetails7);
+                        MenuItem m8 = new MenuItem(GetDetails8);
+                        MenuItem m9 = new MenuItem(GetDetails9);
 
 
 
@@ -381,7 +404,62 @@ public class ConnectionController {
 
 
 
-                        SavedMenu.getItems().add(m1);
+
+
+                        if (GetDetails1 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m1);
+
+                        }
+                        if (GetDetails1 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m1);
+
+                        }
+                        if (GetDetails2 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m2);
+
+                        }
+                        if (GetDetails3 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m3);
+
+                        }
+                        if (GetDetails4 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m4);
+
+                        }
+                        if (GetDetails5 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m5);
+
+                        }
+                        if (GetDetails6 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m6);
+
+                        }
+                        if (GetDetails7 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m7);
+
+                        }
+                        if (GetDetails8 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m8);
+
+                        }
+                        if (GetDetails9 != "1024718237409182740927834023") {
+
+                            SavedMenu.getItems().add(m9);
+
+                        }
+
+
+
+
 
 
                     }
