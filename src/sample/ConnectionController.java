@@ -352,9 +352,59 @@ public class ConnectionController {
                     File Sysfile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
 
                     Stream<String> lines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
+
                     String SavedConnectionNumber = lines.skip(7).findFirst().get();
 
+                    //lowest numeral value of free save spot
                     int SavedConnectINTEGAR = Integer.parseInt(SavedConnectionNumber);
+
+                    int FlexableInt = Integer.parseInt(SavedConnectionNumber);
+
+
+                    FlexableInt--;
+                    FlexableInt--;
+                    String RealInt = String.valueOf(FlexableInt);
+
+                    if (FlexableInt==0) {
+                        File HistFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
+
+                        Stream<String> HistLines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
+                        String GetDetails = lines.skip(0).findFirst().get();
+
+                        MenuItem m1 = new MenuItem(GetDetails);
+
+
+
+
+
+
+
+
+                        SavedMenu.getItems().add(m1);
+
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -364,7 +414,11 @@ public class ConnectionController {
 
                     String NumberToPutInThere = String.valueOf(SavedConnectINTEGAR);
 
-                    String HowManySavedConnections = String.valueOf(SavedConnectINTEGAR--);
+
+
+
+
+
 
 
 

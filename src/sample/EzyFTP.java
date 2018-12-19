@@ -43,6 +43,7 @@ public class EzyFTP extends Application {
         primaryStage.show();
         Image icon = new Image(getClass().getResourceAsStream("/images/logo.png"));
         primaryStage.getIcons().add(icon);
+
         File Sysfile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
         if (Sysfile.isFile()) {
 
