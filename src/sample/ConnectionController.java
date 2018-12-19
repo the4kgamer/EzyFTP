@@ -365,7 +365,8 @@ public class ConnectionController {
                     FlexableInt--;
                     String RealInt = String.valueOf(FlexableInt);
 
-                    if (FlexableInt==0) {
+                    if (FlexableInt>=0) {
+                        
                         File HistFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
 
                         Stream<String> HistLines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
