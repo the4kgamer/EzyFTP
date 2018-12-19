@@ -12,6 +12,8 @@ import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
 import com.chilkatsoft.CkFtp2;
@@ -349,6 +351,13 @@ public class ConnectionController {
 
         success = ftp.Connect();
         if (success == true) {
+            Date date = new Date();
+            String strDateFormat = "hh:mm:ss a";
+            DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
+            String formattedDate= dateFormat.format(date);
+            File BigFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\");
+
+            BigFile = new File(IP + formattedDate + " Log");
 
 
             if (SaveShizz == true) {
@@ -363,6 +372,11 @@ public class ConnectionController {
 
                 } else
                 {
+
+
+
+
+
                     File Sysfile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
 
                     Stream<String> lines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
@@ -384,9 +398,9 @@ public class ConnectionController {
 
                     if (FlexableInt>=0) {
 
-                        File HistFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
+                        //File HistFile = new File("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys");
 
-                        Stream<String> HistoryLines = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
+                        Stream<String> HistoryLines1 = Files.lines(Paths.get("C:\\Users\\admin\\Desktop\\EzyFTPClient\\src\\sample\\Sys"));
                         String GetDetails1 = lines.skip(0).findFirst().get();
                         String GetDetails2 = lines.skip(1).findFirst().get();
                         String GetDetails3 = lines.skip(2).findFirst().get();
