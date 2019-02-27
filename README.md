@@ -2,7 +2,7 @@
 
 # NOT READY
 
-the reason I have put a repo up for this is so I can have all my progress documented, and so I guess my friends can view the code.. the project is NOT ready yet, I am constantly adding new features. The idea of the FTP is so it will allow 1 click instalations of resources/plugins onto your FiveM (gta 5 RP) server.
+the reason I have put a repo up for this is so I can have all my progress documented, and so I guess my friends can view the code.. the project is NOT ready yet, I am constantly adding new features. The idea of the FTP is to teach me Java.
 
 # EzyFTP
 an easy to use, FTP client 
